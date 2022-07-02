@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>Login Page</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet"  type="text/css" href="./static/style.css">
+<!--      <link rel="stylesheet"  type="text/css" href="./ccc/main.css">-->
+  </head>
+  <body>
+  <div class="login-form">
+      <h1>Login Form</h1>
+      <form action="login" method="post" enctype="application/x-www-form-urlencoded">
+          {% csrf_token %}
+          <p>User Name</p>
+          <input type="text" name="user" placeholder="User Name">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Password"><br><br><br>
+          <a href="{% url 'plantapp:form' %}" class="btn btn-warning">Submit</a>
+          <a href="{% url 'plantapp:reg' %}" class="btn btn-warning">Register</a>
+
+
+      </form>
+  </div>
+  </body>
+</html>
+

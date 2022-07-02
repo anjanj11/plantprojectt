@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail</title>
+    <link rel="stylesheet"  type="text/css" href="./static/style.css">
+    <link rel="stylesheet"  type="text/css" href="./static/drop.css">
+    <link rel="stylesheet"  type="text/css" href="./static/index.css">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <div class="login-form">
+      <h1>Detail Page</h1>
+      <form action="login" method="post" enctype="application/x-www-form-urlencoded">
+          {% csrf_token %}
+          <p>Customer Name</p>
+          <input type="text" name="user" placeholder="Customer Name">
+          <p>Password</p>
+          <input type="text" name="ph no" placeholder="Ph No">
+          <p> Email</p>
+          <input type="email" name="email" placeholder="Email">
+           <p> Address</p>
+          <input type="text" name="Address" placeholder="Address">
+          <div class="menu-bar">
+
+<ul>
+<li><a href="#">District</a>
+<div class="sub-menu-1">
+<ul>
+<li class="hover-me"><a href="#">ERNAKULAM</a>
+<div class="sub-menu-2">
+<ul>
+<li><a href="#">KOCHI</a></li>
+<li><a href="#">KALAMASSERY</a></li>
+<li><a href="#">KAKANAD</a></li>
+</ul>
+</div>
+</li>
+<li class="hover-me"><a href="#">ALAPPUZHA</a>
+<div class="sub-menu-2">
+<ul>
+<li><a href="#">AROOR</a></li>
+<li><a href="#">MARARIKULAM</a></li>
+<li><a href="#">AZIKODE</a></li>
+</ul>
+</div>
+</li>
+<li class="hover-me"><a href="#">Thrissur</a>
+<div class="sub-menu-2">
+<ul>
+<li><a href="#">KORATTY</a></li>
+<li><a href="#">KODUGALLOR</a></li>
+<li><a href="#">KALADY</a></li>
+</ul>
+</div>
+</li>
+</div>
+</li>
+</ul>
+</div>
+          <div class="menu-bar">
+
+<ul>
+<li><a href="#">Plant Types</a>
+<div class="sub-menu-1">
+<ul>
+<li class="hover-me"><a href="#">Indoor</a>
+<div class="sub-menu-2">
+<ul>
+<li><a href="#">Ficus-1000</a></li>
+<li><a href="#">Spider Plant-2000</a></li>
+<li><a href="#">Begonna-670</a></li>
+</ul>
+</div>
+</li>
+<li class="hover-me"><a href="#">   Outdoor</a>
+<div class="sub-menu-2">
+<ul>
+<li><a href="#">lemon Plant-</a></li>
+<li><a href="#">Strawberry-980</a></li>
+<li><a href="#">Canna-9870</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+          </div>
+      </form>
+
+
+    <div class="Clic-here"><a href="{% url 'plantapp:index' %}">Logout</a></div>
+           <div class="custom-model-main">
+          <div class="custom-model-inner">
+<!--          <a href="{% url 'plantapp:index' %}" class="btn btn-warning button2">Logout</a>-->
+        </div>
+        </div>
+            <div class="Click-here">Submit</div>
+        <div class="custom-model-main">
+    <div class="custom-model-inner">
+    <div class="close-btn">×</div>
+        <div class="custom-model-wrap">
+            <div class="pop-up-content-wrap">
+               <h2>!!!!!</h2>
+               <p>Your order is placed.</p>
+            </div>
+        </div>
+    </div>
+       </div>
+    </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+    $(".Click-here").on('click', function() {
+      $(".custom-model-main").addClass('model-open');
+    });
+    $(".close-btn, .bg-overlay").click(function(){
+      $(".custom-model-main").removeClass('model-open');
+    });
+    </script>
+</body>
+</html>

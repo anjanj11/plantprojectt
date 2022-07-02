@@ -1,0 +1,90 @@
+*
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.menu-bar /*vertically displayed*/
+{
+background:#990000;
+
+}
+.menu-bar ul /*horizontally displayed as a navigation bar in the same line*/
+{
+
+list-style: none;
+color: #fff;
+}
+.menu-bar ul li
+{
+width:150px;
+margin:10px;
+padding:15px;
+}
+.menu-bar ul li a /*the anchor tag's hyperlinks are displayed as normal text in white colour*/
+{
+text-decoration: none;
+color: #fff;
+}
+.menu-bar ul li:hover /*changes background colour of each block when that particular option of menu-bar is hovered upon*/
+{
+background-color: #cc0000;
+border-radius: 2px;
+}
+.sub-menu-1 /*sub-menu-1 is hidden until the cursor is placed on the menu-bar option containing it*/
+{
+display: none;
+}
+.menu-bar ul li:hover .sub-menu-1 /*displays the sub-menu-1 when the menu-bar option containing a sublist is hovered upon*/
+{
+display: block;
+position: absolute;
+background: #990000;
+margin-top: 15px;
+margin-left: -35px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul /*the options of the sub-menu-1 are displayed in vertical blocks*/
+{
+display: block;
+margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li/*options of the sub-menu-1 are separated with dotted lines*/
+{
+width: 150px;
+padding: 10px;
+border-bottom: 2px dotted #fff;
+background: transparent;
+border-radius: 0px;
+text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child /*dotted line is removed for the last option*/
+{
+border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover /*displays the sub-menu-2 when the sub-menu-1 option containing a sublist is hovered upon*/
+{
+color: #222;
+}
+.sub-menu-2 /*sub-menu-2 is hidden until the cursor is placed on the sub-menu-1 option containing it*/
+{
+display: none;
+border-radius: 2px;
+}
+.hover-me:hover .sub-menu-2 /*the options of the sub-menu-2 are displayed in vertical blocks*/
+{
+position: absolute;
+display: block;
+margin-top: 12px;
+margin-left: 20px;
+background: #cc0000;
+}
+
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;

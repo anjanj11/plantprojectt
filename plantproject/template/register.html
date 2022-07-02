@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>Register Page</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet"  type="text/css" href="./static/style.css">
+  </head>
+  <body>
+  <div class="login-form">
+      <h1>Register Here !!</h1>
+      <form action="register" method="post">
+          {% csrf_token %}
+          <p>User Name:</p>
+          <input type="text" name="user" placeholder="User Name"><br>
+          <p>Password:</p>
+          <input type="password" name="password" placeholder="Password">
+          <p>Confiorm Password:</p>
+          <input type="password" name="cpassword" placeholder="Confiorm Password"><br><br>
+          <a href="{% url 'plantapp:login' %}" class="btn btn-warning">Submit</a>
+      </form>
+  </div>
+  </body>
+</html>
+
